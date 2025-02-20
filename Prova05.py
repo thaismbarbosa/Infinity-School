@@ -11,39 +11,40 @@
 #Ao final, exiba a média geral da turma.
 
 #definir um número de alunos para realizar o calculo
+def calcular_media():
+    # Solicita o número de alunos
+    num_alunos = int(input("Digite o número de alunos: "))
 
-num_alunos = int(input("Digite o número de alunos: "))
-soma_geral = 0
+    soma_geral = 0
 
-for i in range( 3):
-    print(f"\nAluno {i + 1}:")
+    #informações de cada aluno
+    for i in range(num_alunos):
+        print(f"\nAluno {i + 1}:")
+        
+        # Solicita o nome e as três notas do aluno
+        nome = input("Digite o nome do aluno: ")
+        nota1 = float(input("Digite a primeira nota: "))
+        nota2 = float(input("Digite a segunda nota: "))
+        nota3 = float(input("Digite a terceira nota: "))
+        
+        # Calcula a média do aluno
+        media = (nota1 + nota2 + nota3) / 3
+        
+        # Verificar situação do aluno
+        situacao = "Aprovado" if media >= 7.0 else "Reprovado"
+        
+        # Exibir o resultado
+        print(f"\nNome: {nome}")
+        print(f"Notas: {nota1}, {nota2}, {nota3}")
+        print(f"Média: {media:.2f}")
+        print(f"Situação: {situacao}")
+        
+        #Acumuladora para descobrir a media
+        soma_geral += media
 
-    nome = input("Digite o nome do Aluno: ")
-    nota1 = float(input("Digite a primeira nota: "))
-    nota2 = float(input("Digite a segunda nota: "))
-    nota3 = float(input("Digite a terceira nota: "))
-
-    media = (nota1 + nota2 + nota3 / 3)
-    print(media)
-
-#Verificar se o aluno foi aprovado ou não
-if media >= 7.0:
-        resultado = "Aprovado"
-
-else:
-        print("Reprovado")
-
-#exibir resultado pro aluno
-print(f"Nome: {nome}")
-print(f"Notas: {nota1}, {nota2}, {nota3}")
-print(f"Média: {media: .2f}")
-print(f"Situação: {resultado}")     
-
-#calcular media geral
-
-soma_geral += media
-media_geral = soma_geral / num_alunos
-print(f"\aMédia geral da turma: {media_geral : .2f}")
+    # Calcula e exibe a média geral da turma
+    media_geral = soma_geral / num_alunos
+    print(f"\nMédia geral da turma: {media_geral:.2f}")
 
 
-
+calcular_media()
