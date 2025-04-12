@@ -1,4 +1,4 @@
-# Atividade 1 (*args)
+i# Atividade 1 (*args)
 def concatenar_strings(*args):
     resultado = ""
     for string in args:
@@ -41,3 +41,9 @@ def criar_lista_de_compras(*args):
     return list(args)
 
 print(criar_lista_de_compras('areia ', 'tijolo ', 'cimento'))
+
+# Atividade 6 lambda
+
+paridade = lambda x: 'par' if x % 2 == 0 else 'impar' 
+print(paridade(2))
+print(paridade(3))
