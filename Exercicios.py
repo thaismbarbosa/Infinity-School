@@ -35,3 +35,9 @@ def maior_string(lista):
 strings = ["maçã", "banana", "kiwi", "abacaxi"]
 print(maior_string(strings))
 
+# Atividade 5
+
+def criar_lista_de_compras(*args):
+    return list(args)
+
+print(criar_lista_de_compras('areia ', 'tijolo ', 'cimento'))
