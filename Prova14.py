@@ -1,3 +1,4 @@
+#criando a primmeira classe
 class Animal:
     def __init__(self):
         pass
@@ -5,7 +6,10 @@ class Animal:
     def falar(self):
         print('Este animal faz um som genérico.')
 
+meu_animal = Animal()
+meu_animal.falar()
 
+#criando a segunda classe 
 class Cachorro:
     def __init__(self, raca, nome):
         self.raca = raca
@@ -19,6 +23,7 @@ print(meu_cachorro.raca)
 print(meu_cachorro.nome)
 meu_cachorro.falar()
 
+#criando a terceira classe
 class Gato:
     def __init__(self, raca, nome):
         self.raca = raca
@@ -32,5 +37,3 @@ print(meu_gato.raca)
 print(meu_gato.nome)
 meu_gato.falar()
 
-meu_animal = Animal()
-meu_animal.falar()
